@@ -1,0 +1,210 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'raleway';
+	user-select: none;
+}
+h {
+	font-family: 'raleway';
+}
+a {
+	text-decoration: none;
+	color: white;
+	font-weight: lighters;
+}
+.section-1 {
+	height: 100vh;
+	width: 100vw;
+	background: url('../mountains.jpg');
+	background-size: 100%;
+}
+.section-1-bottom-fade {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8), black);
+}
+.header {
+	z-index: 100;
+	position: absolute;
+	height: 16vh;
+	width: 100vw;
+	background: linear-gradient(to bottom, black, transparent);
+}
+.nav {
+	height: 10vh;
+	width: 40vw;
+	margin-left: 30vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.navigation-btn {
+	border-radius: 3px;
+	width: 5vw;
+	height: 5vh;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.2s;
+}
+.navigation-btn:hover {
+	border: 3px solid 	#FF10F0;
+	box-shadow: 0 0 10px 	#FF10F0;
+	width: 6vw;
+}
+.nav-text {
+	font-size: 16px;
+	opacity: 60%;
+}
+.center-container {
+	position: absolute;
+	height: 85vh;
+	width: 75vw;
+	border-radius: 8px;
+	margin-top: 10vh;
+	margin-left: 12.5vw;
+	display: flex;
+}
+.logo-bar {
+	height: 8vh;
+	width: 18vw;
+	position: absolute;
+	margin-top: 1vh;
+	margin-left: 10vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.navlogo {
+	height: 35px;
+	width: 35px;
+}
+.logotext-1 {
+	font-size: 16px;
+	color: white;
+	opacity: 90%;
+}
+.spacing {
+	height: 1px;
+	width: 8px;
+}
+.logotext-2 {
+	font-size: 22px;
+	font-family: 'arial black';
+	font-weight: bolder;
+	color: black;
+	text-shadow: 0px 0px 4px #FF10F0;
+}
+.sec-1-left {
+	height: 100%;
+	width: 50%;
+}
+.sec-1-left .up {
+	height: 50%;
+	width: 100%;
+}
+.sec-1-left .down {
+	padding-left: 10%;
+	width: 70%;
+}
+.sec-1-left .up .in {
+	position: relative;
+	width: 70%;
+	margin-left: 10%;
+	height: 70%;
+	top: 15%;
+	display: flex;
+}
+.glow-line-1 {
+	opacity: 0%;
+	height: 5px;
+	width: 2px;
+	background: #FF5F1F;
+	box-shadow: 0 0 10px 1px #FF5F1F;
+}
+.after-gl-text-2 {
+	font-family: 'Raleway';
+	font-weight: bolder;
+	opacity: 90%;
+	font-size: 72px;
+	opacity: 0%;
+}
+.after-gl-text-1 {
+	opacity: 0%;
+}
+.sec-2-left {
+	height: 100%;
+	width: 50%;
+/* 	background: green; */
+}
+.sec-1-eye-catcher {
+	position: relative;
+	z-index: 101;
+	height: 70%;
+	width: 70%;
+	border-radius: 8px;
+	margin-top: 20%;
+	background: black;
+
+    backdrop-filter: blur(30px) saturate(115%);
+    -webkit-backdrop-filter: blur(25px) saturate(115%);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    border: 1px solid #FF5F1F;
+	box-shadow: 0 0 10px 1px #FF5F1F;
+
+	cursor: pointer;
+
+	top: 20px;
+	left: 20px;
+	opacity: 0%;
+	transition: 0.2s;
+}
+.sec-1-eye-catcher:hover {
+	transform: scale(1.07);
+}
+.sec-1-eye-catcher2 {
+	position: relative;
+	z-index: 102;
+	height: 10%;
+	width: 9%;
+	border-radius: 8px;
+	background: black;
+
+    backdrop-filter: blur(30px) saturate(115%);
+    -webkit-backdrop-filter: blur(25px) saturate(115%);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    border: 1px solid #FF10F0;
+	box-shadow: 0 0 10px 1px #FF10F0;
+
+	cursor: pointer;
+
+	top: -150px;
+	left: 410px;
+	opacity: 0%;
+	transition: 0.2s;
+}
+.bitcoin-logo {
+	opacity: 0%;
+	z-index: 102;
+	position: absolute;
+	height: 250px;
+	width: 250px;
+	margin-left: 80px;
+	margin-top: 20px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+.pointer-arrow {
+	z-index: 101;
+	position: absolute;
+	filter: drop-shadow(2px 2px 7px #FF5F1F);
+	height: 120px;
+	width: 120px;
+	margin-top: 80vh;
+	margin-left: 20vw;
+	opacity: 0%;
+}
