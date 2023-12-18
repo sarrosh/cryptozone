@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CRYPTO-ZONES-ADMIN</title>
+	<style type="text/css">
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		.warning {
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+			width: 100vw;
+			align-items: center;
+			justify-content: center;
+			background: black;
+		}
+		.login {
+			display: none;
+			flex-direction: column;
+			height: 100vh;
+			width: 100vw;
+			align-items: center;
+			justify-content: center;
+			background: black;
+		}
+		h1 {
+			margin: 0;
+			padding: 0;
+			color: whitesmoke;
+			font-family: consolas;
+		}
+		::selection {
+			background: deeppink;
+		}
+		.button {
+			height: 40px;
+			width: 180px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			outline: none;
+			cursor: pointer;
+			background: transparent;
+			font-family: consolas;
+		}
+		.button-red {
+			color: red;
+			border: 3px solid red;
+		}
+		.button-red:hover {
+			color: black;
+			border: 3px solid red;
+			background: red;
+			font-weight: bolder;
+		}
+		input {
+			height: 40px;
+			width: 500px;
+			padding-left: 20px;
+			padding-right: 20px;
+			outline: none;
+			background: black;
+			border: 3px solid red;
+			color: red;
+		}
+		@keyframes rotate {
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+		.loader {
+			height: 40px;
+			width: 40px;
+			border-radius: 500px;
+			border-top: 2px solid lime;
+			display: none;
+			animation: rotate 1s ease-in-out infinite;
+		}
+
+
+		.real-page {
+			height: 100vh;
+			width: 100vw;
+			background: #191919;
+			display: none;
+			align-items: center;
+			justify-content: space-evenly;
+		}
+		.section-a {
+			height: 90vh;
+			width: 20vw;
+			background: #080808;
+			box-shadow: 0 0 40px black;
+		}
+		.section-b {
+			height: 90vh;
+			width: 70vw;
+			background: #080808;
+			box-shadow: 0 0 40px black;
+		}
+		.neath {
+			font-family: raleway;
+			font-weight: lighter;
+			color: whitesmoke;
+			font-size: 24px;
+		}
+		.centerize {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.neatb {
+			margin-top: 10px;
+			height: 45px;
+			color: whitesmoke;
+			font-family: raleway;
+			background: black;
+			cursor: pointer;
+			transition: 0.1s;
+		}
+		.neatb:hover {
+			scale: 1.05;
+		}
+	</style>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+	
+</head>
+<body onload="developerMode()">
+	<div class="warning">
+		<h1>This page is restricted for other users/</h1>
+		<h1>Enter only if you are admin/</h1>
+		<h1>Enter at your own risk if you are not admin_</h1><br><br>
+		<div class="button button-red" onclick="warningDone()">ENTER...</div>
+	</div>
+	<div class="login">
+		<h1 id="login-ln-1">~root::CryptoZone/</h1>
+		<h1 id="login-ln-2">Enter password here/</h1>
+		<br><br>
+		<input type="password" id="password"><br><br>
+		<div class="button button-red" onclick="checkPassword()" id="login-btn">LOGIN...</div>
+		<div class="loader"></div>
+	</div>
+	<div class="real-page">
+		<!-- <input type="color" name="" value="" placeholder=""> -->
+		<div class="section-a">
+			<div class="centerize" style="height:100px;width:100%;background:black;border-bottom:1px solid white;">
+				<h1 class="neath">Stuff</h1>
+			</div>
+			<br>
+			<div class="centerize neatb" style="width:90%;margin-left:5%">Add Account</div>
+			<div class="centerize neatb" style="width:90%;margin-left:5%">Remove Account</div>
+			<div class="centerize neatb" style="width:90%;margin-left:5%">Edit Existing</div>
+			<div class="centerize neatb" style="width:90%;margin-left:5%">Analytics</div>
+		</div>
+		<div class="section-b"></div>
+	</div>
+
+
+	<script type="text/javascript">
+		function warningDone() {
+			document.querySelector('.warning').style.display = 'none';
+			document.querySelector('.login').style.display = 'flex';
+			document.querySelector('#password').focus();
+		}
+		function checkPassword() {
+			var password = document.querySelector('#password').value;
+			if (password == "a") {
+				document.querySelector('#login-ln-1').innerHTML = 'Redirecting.../';
+				document.querySelector('#login-ln-2').innerHTML = 'PlzWait.../';
+				document.querySelector('#password').style.display = 'none';
+				document.querySelector('#login-btn').style.display = 'none';
+				document.querySelector('.loader').style.display = 'flex';
+				setTimeout(()=>{
+					document.querySelector('.login').style.display = 'none';
+					document.querySelector('.real-page').style.display = 'flex';
+				},4000);
+			}
+			else {
+				document.querySelector('#login-ln-1').innerHTML = 'Incorrect.../';
+				document.querySelector('#login-ln-2').style.display = 'none';
+			}
+		}
+
+
+		// developerMode() functions are just to make the work faster froo the programmer
+		function developerMode() {
+			document.querySelector('.warning').style.display = 'none';
+			document.querySelector('.login').style.display = 'none';
+			document.querySelector('.real-page').style.display = 'flex';
+		}
+	</script>
+</body>
+</html>

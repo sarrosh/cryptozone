@@ -3,6 +3,10 @@ body {
 	margin: 0;
 	font-family: 'raleway';
 	user-select: none;
+	background: url('../mountains.jpg');
+	background-size: 100%;
+	background-attachment: fixed;
+	overflow-x:hidden;
 }
 h {
 	font-family: 'raleway';
@@ -15,8 +19,6 @@ a {
 .section-1 {
 	height: 100vh;
 	width: 100vw;
-	background: url('../mountains.jpg');
-	background-size: 100%;
 }
 .section-1-bottom-fade {
 	position: absolute;
@@ -161,6 +163,10 @@ a {
 	left: 20px;
 	opacity: 0%;
 	transition: 0.2s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .sec-1-eye-catcher:hover {
 	transform: scale(1.07);
@@ -194,7 +200,7 @@ a {
 	height: 250px;
 	width: 250px;
 	margin-left: 80px;
-	margin-top: 20px;
+	margin-top: 10px;
 	cursor: pointer;
 	transition: 0.2s;
 }
@@ -207,4 +213,258 @@ a {
 	margin-top: 80vh;
 	margin-left: 20vw;
 	opacity: 0%;
+}
+.inputfieldneat {
+	cursor: pointer;
+	outline: none;
+	height: 5vh;
+	width: 80%;
+	background: black;
+	border-radius: 7px;
+	border: 2px solid #FF5F1F;
+	font-family: raleway;
+	font-weight: lighter;
+	color: white;
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-top: 15px;
+}
+::placeholder {
+	font-weight: bold;
+}
+.button {
+	height: 6vh;
+	width: 90%;
+	background: #FF5F1F;
+	color: black;
+	font-weight: bolder;
+	font-family: raleway;
+	border-radius: 7px;
+	box-shadow: 0 0 10px 1px #FF5F1F;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	transition: 0.2s;
+	margin-top: 15px;
+}
+.button:hover {
+	height: 7vh;
+}
+.section-2 {
+	height: 100vh;
+	width: 100vw;
+	background: black;
+}
+.service-imgs {
+	filter: invert(1);
+	height: 110px;
+	width: 110px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Custom Scroll bar */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #6C6C6C black;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: black;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: black;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: black;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #6C6C6C;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #737373;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #515151;
+}
+.star-layer {
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+}
+.star-1 {
+	height: 35px;
+	width: 35px;
+	margin-top: 40vh;
+	margin-left: 10vw;
+	animation: 10s rotate ease-in-out infinite;
+	opacity: 0.4;
+	position: absolute;
+}
+.star-2 {
+	height: 20px;
+	width: 20px;
+	margin-top: 60vh;
+	margin-left: 3vw;
+	animation: 9s rotate ease-in-out infinite;
+	opacity: 0.4;
+	position: absolute;
+}
+.star-3 {
+	height: 40px;
+	width: 40px;
+	margin-top: 13vh;
+	margin-left: 80vw;
+	animation: 10s rotate ease-in-out infinite;
+	opacity: 0.4;
+	position: absolute;
+}
+.star-4 {
+	height: 15px;
+	width: 15px;
+	margin-top: 18vh;
+	margin-left: 90vw;
+	animation: 10s rotate ease-in-out infinite;
+	opacity: 0.4;
+	position: absolute;
+}
+.main-layer-sec-2 {
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.service-cards {
+	height: 60vh;
+	width: 80vw;
+	flex-direction: row;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.spacebwcards {
+	height: 10px;
+	width: 50px;
+}
+.section-3 {
+	height: 80vh;
+	width: 100vw;
+	background: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.flip-card {
+  background-color: transparent;
+  height: 350px;
+  width: 300px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  cursor: pointer;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+	border: 3px solid 	#FF10F0;
+	box-shadow: 0 0 10px 	#FF10F0;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Style the back side */
+.flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flip-card-back p {
+	margin-left: 30px;
+	margin-right: 30px;
 }

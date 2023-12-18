@@ -15,5 +15,4 @@ function defaultAnimations() {
 		document.querySelector('.sec-1-eye-catcher2').style.animation = 'infinityupdown 4s ease-in-out infinite';
 	},1700);
 	document.querySelector('.bitcoin-logo').style.animation = 'eyecappear3 0.6s ease-in-out 0.8s forwards';
-	document.querySelector('.pointer-arrow').style.animation = 'justappear 0.6s ease-in-out 0.3s forwards';
 }
