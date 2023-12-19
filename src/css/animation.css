@@ -92,6 +92,28 @@
 		transform: rotate(360deg);
 	}
 }
+@keyframes glappear2 {
+	50% {
+		opacity: 100%;
+	}
+	80% {
+		opacity: 0%;
+	}
+	85% {
+		opacity: 100%;
+	}
+	90% {
+		opacity: 0%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
+@keyframes delay-animation {
+	100% {
+		opacity: 100%;
+	}
+}
 
 
 

@@ -200,7 +200,7 @@ a {
 	height: 250px;
 	width: 250px;
 	margin-left: 80px;
-	margin-top: 10px;
+	margin-top: -30px;
 	cursor: pointer;
 	transition: 0.2s;
 }
@@ -261,28 +261,15 @@ a {
 	height: 110px;
 	width: 110px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.sec-bw-line {
+/* 	position: absolute; */
+	background: #FF5F1F;
+	height: 2px;
+	width: 60vw;
+	box-shadow: 0 0 10px 1px #FF5F1F;
+	border-radius: 500px;
+	animation: 1s glappear2 linear 2s infinite, 2s delay-animation linear infinite;
+}
 /* Custom Scroll bar */
 /* Firefox */
 * {
@@ -385,8 +372,24 @@ a {
 .section-3 {
 	height: 80vh;
 	width: 100vw;
-	background: black;
+	background: url('../bg-img-1.jpg');
+	background-size: 100vw 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
+.section-3-shader {
+	height: 80vh;
+	width: 100%;
+	background: linear-gradient(to bottom, black 10%, rgba(0, 0, 0, 0.7) 80%);
+	position: absolute;
+}
+
+
+
+
+
 
 
 
