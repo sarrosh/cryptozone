@@ -144,7 +144,7 @@ a {
 .sec-1-eye-catcher {
 	position: relative;
 	z-index: 101;
-	height: 70%;
+	height: 75%;
 	width: 70%;
 	border-radius: 8px;
 	margin-top: 20%;
@@ -370,20 +370,103 @@ a {
 	width: 50px;
 }
 .section-3 {
-	height: 80vh;
+	height: 130vh;
 	width: 100vw;
 	background: url('../bg-img-1.jpg');
-	background-size: 100vw 100vh;
+	background-size: 100vw 130vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 }
 .section-3-shader {
-	height: 80vh;
-	width: 100%;
-	background: linear-gradient(to bottom, black 10%, rgba(0, 0, 0, 0.7) 80%);
+	height: 130vh;
+	width: 100vw;
+	background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.7));
 	position: absolute;
+}
+.comment-section {
+	height: 60vh;
+	width: 90vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.comment-card {
+	height: 40vh;
+	width: 26vw;
+
+
+
+    backdrop-filter: blur(30px) saturate(115%);
+    -webkit-backdrop-filter: blur(25px) saturate(115%);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    border: 1px solid #FF5F1F;
+	box-shadow: 0 0 10px 1px #FF5F1F;
+
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	cursor: pointer;
+	transition: 0.5s;
+}
+.comment-card:hover {
+	transform: scale(1.08);
+}
+.comment-card-head {
+	display: flex;
+	align-items: center;
+	height: 8vh;
+	width: 95%;
+}
+.comment-card-body {
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+	height: 25vh;
+	width: 90%;
+	display: flex;
+	justify-content: center;
+}
+.comment-card-head-img {
+	height: 45px;
+	width: 45px;
+	border-radius: 500px;
+}
+.spacing-x {
+	height: 2px;
+	width: 10px;
+}
+.comment-card-head-name {
+	height: 45px;
+	width: 70%;
+}
+.spacing-x-2 {
+	height: 2px;
+	width: 40px;
+}
+.section-4 {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: black;
+}
+.section-3-bottom-shader {
+	position: absolute;
+	height: 16vh;
+	width: 100vw;
+	margin-top: 114vh;
+	background: linear-gradient(to bottom, transparent, black);
+}
+.customer-attract-section {
+	height: 100vh;
+	width: 100vw;
 }
 
 
